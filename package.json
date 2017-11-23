@@ -1,0 +1,37 @@
+{
+  "name": "beastoso-splinticle",
+  "version": "1.0.1",
+  "description": "A pinterest copycat site",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beastoso/splinticle"
+  },
+  "homepage": "https://splinticle-bookmarket.herokuapp.com/",
+  "bugs": "https://github.com/beastoso/splinticle/issues",
+  "keywords": [
+    "MongoDB",
+    "Mongoose",
+    "full stack",
+    "Express",
+    "Node",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Simon Carter",
+  "license": "GNU",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^1.2.0",
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.1.0",
+    "passport": "^0.3.0",
+    "passport-google-oauth2": "^0.1.6",
+    "passport-twitter": "^1.0.4",
+    "request": "^2.83.0"
+  }
+}

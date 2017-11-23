@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Hoard your fave pics here</title>
+		
+		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<header>
+		<img id="title-text" src="/public/img/monster2.png"/>
+		
+		<div id="nav">	Welcome <span id="name"></span>!
+			<a href="/user" class="menu"><i class="fa fa-home"></i></a>
+			<a id="loginBtn" class="menu" href="/login">Login</a>
+			<a id="logoutBtn" class="menu" href="/logout" style="display:none;">Logout</a>
+		</div>
+	</header>
+
+	<body>
+		<div class="container">
+			<h2>Recent pins:</h2>
+			<div id="recentList">
+			</div>
+			<h2>Popular pins:</h2>
+			<div id="popularList">
+			</div>
+			<div id="footer">
+				<p>
+				<a href="/login"><button id="startBtn" class="btn">Start your own board here</button></a>
+				</p>
+			</div>
+		</div>
+
+		<div id="dummyPin" class="tile" style="display:none;">
+			<div class="title"></div> 
+			<button class="removeFellowBtn" title="Stop following" style="display:none;"><i class="fa fa-close"></i></button>
+			<button class="pinBtn"><img class="image" src="/public/img/pic-placeholder.png" onerror="imgError(this);" /></button>
+			<br/>
+			<div class="pinBtns">
+				<input name="likesCount" value="0" size="3" disabled /><button class="likeBtn"><i class="fa fa-heart"></i></button>
+				<button class="copyBtn" title="Copy to my wall" style="display:none;"><i class="fa fa-clone"></i></button>
+			</div>
+		</div>
+		
+		<div id="viewPin" class="hidden">
+			<div class="viewHeader">
+				<span class="viewTitle"></span> by <a class="viewUserLink"><span class="viewUserName"></a></span> 
+				<input name="likesCount" value="0" size="3" disabled /><button id="likeBtn" class="likeBtn" style="display:none;"><i class="fa fa-heart"></i></button>
+				<button id="viewCopyBtn" style="display:none;"><i class="fa fa-clone"></i></button>
+				<button id="closeBtn"><i class="fa fa-close"></i></button>
+			</div>
+			<div id="viewImage" ></div>
+		</div>
+				
+		<div id="notification" class="hidden">
+			<button id="msgCloseBtn"><i class="fa fa-close"></i></button>
+			<div id="message"></div>
+		</div>
+		<script type="text/javascript" src="/common/ajax-functions.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	  	<script type="text/javascript" src="/controllers/indexController.client.js"></script>
+	</body>
+
+</html>
